@@ -1,0 +1,15 @@
+<h1>Hello India</h1>
+<h1>Delete</h1>
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Are U want Delete For Surely?</h1>
+<p>{{object.title}}</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <button class="btn btn-danger">Yes</button>
+</form>
+
+{% endblock %}
